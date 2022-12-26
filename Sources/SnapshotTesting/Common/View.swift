@@ -547,6 +547,7 @@ extension UITraitCollection {
 #endif
 
 func addImagesForRenderedViews(_ view: View) -> [Async<View>] {
+  print("addImagesForRenderedViews")
   return view.snapshot
     .map { async in
       [
@@ -854,7 +855,8 @@ import Cocoa
 
 private final class ScaledWindow: NSWindow {
   override var backingScaleFactor: CGFloat {
-    return 2
+    print("unscaled")
+    return 1
   }
 }
 #endif
