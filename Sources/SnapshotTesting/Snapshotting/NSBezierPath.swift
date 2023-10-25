@@ -26,6 +26,7 @@ extension Snapshotting where Value == NSBezierPath, Format == NSImage {
   }
 }
 
+@available(macOS 11.0, *)
 extension Snapshotting where Value == NSBezierPath, Format == String {
   /// A snapshot strategy for comparing bezier paths based on pixel equality.
   @available(iOS 11.0, *)
